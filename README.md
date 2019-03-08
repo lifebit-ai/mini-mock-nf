@@ -11,6 +11,7 @@ This pipeline has three mandatory parameters and one options:
   a glob pattern. By default it is set to `"${baseDir}/reads/*_{1,2}*"`
 - `reference`: Path to a single text file. An example reference file is provided in 
   `reads/reference.txt`
+- `adaptersDir`: Path to a directory. Must be a directory for the pipeline to pass.
 - `maxLines`: Text value parameter that should be an integer. It fetches the first N
   lines from the FastQ files. It can be used to force the pipeline to fail by providing
   a higher number than the number of lines in the FastQ files (the example ones contain
