@@ -26,11 +26,14 @@ process inputCheckers {
 	gunzip -c ${fastqPair[0]} | head -n $maxNumberOfLines >> out.txt
 	gunzip -c ${fastqPair[1]} | head -n $maxNumberOfLines >> out.txt
 
+	# Check if provided adapterDir parameter is an actual directory
 	if [ ! -d "$adaptersDir" ]; then
 		echo 'param.adaptersDir did not provide a directory';
 		exit 1;
 	fi
 
+	# Checked if the retrieved lines from the FastQ files match the
+	# the expected number.
 	linesRetrieved=\$(grep -c ^ out.txt)
 	expectedLines=\$(($maxNumberOfLines * 2))
 	if [ "\$linesRetrieved" -ne "\$expectedLines" ]; then
