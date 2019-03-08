@@ -1,0 +1,4 @@
+this is a reference file
+that should contain some text
+if it does not contain some text
+it should also be fine
