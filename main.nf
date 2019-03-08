@@ -15,8 +15,6 @@ if (!params.requiredFlag) { exit 1, 'params.requiredFlag is a... required flag' 
 
 process inputCheckers {
 
-	echo true
-
 	input:
 	set sampleId, file(fastqPair) from readsChannel
 	file reference  from referenceChannel
