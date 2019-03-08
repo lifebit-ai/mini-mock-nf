@@ -5,7 +5,7 @@ meaningfull other than just checking input parameters.
 
 ## How to run it
 
-This pipeline has three mandatory parameters and one options:
+This pipeline has four mandatory parameters and one options:
 
 - [optional] `reads`: Path to paired-end FastQ files that must be specified with
   a glob pattern. By default it is set to `"${baseDir}/reads/*_{1,2}*"`
